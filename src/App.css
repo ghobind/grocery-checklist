@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.active {
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.default {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.4rem 1rem;
+  margin: 2rem 2rem;
+  transition: all 0.3s;
+}
+
+.default:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.brand {
+  color: black;
+  font-size: 120%;
+}
+.brand:hover {
+  color: black;
+  font-size: 120%;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 110%;
+}
+
+.spacing {
+  margin-left: 35%;
+}
+
+.navigation {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 2%;
+}
+
+.error {
+  color: #f95178;
+  font-style: italic;
+  font-size: 80%;
+}
+
+.total-price {
+  font-size: 150%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+}
+
+.modal-body {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}

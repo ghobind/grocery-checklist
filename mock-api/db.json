@@ -1,0 +1,156 @@
+{
+  "shopping": [
+    {
+      "name": "My shopping list 1",
+      "id": 1,
+      "date": "2020-01-01T08:00:00.000Z",
+      "price": 78.2,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Coke",
+          "price": "76.90",
+          "quantity": "70"
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 2",
+      "id": 2,
+      "date": "2020-02-03T08:00:00.000Z",
+      "price": 35.3,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Bottle",
+          "price": "34",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 3",
+      "id": 3,
+      "date": "2020-03-03T08:00:00.000Z",
+      "price": 90.84,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Sugar",
+          "price": "89.54",
+          "quantity": "1234"
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 4",
+      "id": 4,
+      "date": "2020-04-04T08:00:00.000Z",
+      "price": 101.3,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Watermelon",
+          "price": "100",
+          "quantity": "20"
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 5",
+      "id": 5,
+      "date": "2020-05-05T08:00:00.000Z",
+      "price": 104.22,
+      "tableContent": [
+        {
+          "item": "Banana",
+          "price": "104.22",
+          "quantity": "123"
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 6",
+      "id": 6,
+      "date": "2020-06-06T08:00:00.000Z",
+      "price": 70.3,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Banana",
+          "price": "69",
+          "quantity": "123"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "My shopping list 7",
+      "date": "Sun Jul 7 2020 02:55:26 GMT-0800 (Pacific Standard Time)",
+      "price": 84.62,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 8",
+      "id": 8,
+      "date": "2020-08-08T08:00:00.000Z",
+      "price": 53.839999999999996,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Pepsi",
+          "price": "52.54",
+          "quantity": "50"
+        }
+      ]
+    },
+    {
+      "name": "My shopping list 9",
+      "id": 10,
+      "date": "2019-08-08T08:00:00.000Z",
+      "price": 107.3,
+      "tableContent": [
+        {
+          "item": "Apple",
+          "price": 1.3,
+          "quantity": 2
+        },
+        {
+          "item": "Banana",
+          "price": "106",
+          "quantity": "12"
+        }
+      ]
+    }
+  ]
+}
