@@ -120,8 +120,10 @@ export default function GroceryList({ createShoppingList, editShoppingList }) {
       // that means i'm importing so it should be making a new list
       if (location.state[1]) {
         setEditing(false);
+        document.title = "Import " + localName;
       } else {
         setEditing(true);
+        document.title = "Edit " + localName;
       }
 
       setName(localName);
@@ -130,6 +132,7 @@ export default function GroceryList({ createShoppingList, editShoppingList }) {
       setDate(localDate);
     } else {
       setDate(new Date().toISOString().substr(0, 10));
+      document.title = "Create Grocery List";
     }
   }, [location.state]);
 
@@ -200,7 +203,12 @@ export default function GroceryList({ createShoppingList, editShoppingList }) {
           <span className="title">
             {editing ? "Update Grocery List" : "Make A New Grocery List"}
           </span>
-          <button type="button" className="btn default" onClick={handleSubmit}>
+          <button
+            type="button"
+            className="btn default"
+            onClick={handleSubmit}
+            data-testid="save-button"
+          >
             Save
           </button>
           <button
@@ -220,8 +228,13 @@ export default function GroceryList({ createShoppingList, editShoppingList }) {
             onChange={handleNameChange}
             className="form-control"
             id="name"
+            data-testid="list-name"
           />
-          {showErrors && <div className="error">{errors.name}</div>}
+          {showErrors && (
+            <div className="error" data-testid="name-error">
+              {errors.name}
+            </div>
+          )}
         </div>
         <div className="form-group">
           <label htmlFor="date">Date</label>
@@ -231,6 +244,7 @@ export default function GroceryList({ createShoppingList, editShoppingList }) {
             onChange={handleDateChange}
             className="form-control"
             id="date"
+            data-testid="date-input"
           />
           {showErrors && <div className="error">{errors.date}</div>}
         </div>
@@ -271,7 +285,11 @@ export default function GroceryList({ createShoppingList, editShoppingList }) {
         ) : (
           <h5 className="text-center">Please add an item</h5>
         )}
-        {showErrors && <div className="error text-center">{errors.table}</div>}
+        {showErrors && (
+          <div className="error text-center" data-testid="table-error">
+            {errors.table}
+          </div>
+        )}
       </form>
     </div>
   );

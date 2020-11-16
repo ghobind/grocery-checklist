@@ -20,16 +20,15 @@ export default function ShoppingLists({ defaultSort, destroyGroceryList }) {
   const { shopping } = useContext(DataStoreContext);
 
   useEffect(() => {
+    document.title = "Home Page";
     let initialSortedRows = sortBy(shopping, [currentSortedField]);
     if (currentSortedField === "date") {
       initialSortedRows = initialSortedRows.sort((a, b) => {
         return new Date(a.date) - new Date(b.date);
       });
-      console.log(initialSortedRows);
     }
     if (currentSortDirection === "desc") {
       initialSortedRows = initialSortedRows.reverse();
-      console.log(initialSortedRows);
     }
     setSortedRows(initialSortedRows);
   }, [shopping, currentSortedField, currentSortDirection]);
@@ -62,7 +61,7 @@ export default function ShoppingLists({ defaultSort, destroyGroceryList }) {
       sortedRows &&
       sortedRows.map((entry) => {
         return (
-          <tr key={entry.id}>
+          <tr key={entry.id} data-testid="row">
             <td onClick={() => redirect(entry)}>{entry.id}</td>
             <td onClick={() => redirect(entry)}>{entry.name}</td>
             <td onClick={() => redirect(entry)}>${entry.price.toFixed(2)}</td>
@@ -97,11 +96,19 @@ export default function ShoppingLists({ defaultSort, destroyGroceryList }) {
       <table className="table table-hover text-center">
         <thead>
           <tr>
-            <th onClick={() => sortRows("id")}>No.</th>
-            <th onClick={() => sortRows("name")}>Name</th>
-            <th onClick={() => sortRows("price")}>Price</th>
-            <th onClick={() => sortRows("date")}>Date</th>
-            <th>Remove</th>
+            <th onClick={() => sortRows("id")} data-testid="header">
+              No.
+            </th>
+            <th onClick={() => sortRows("name")} data-testid="header">
+              Name
+            </th>
+            <th onClick={() => sortRows("price")} data-testid="header">
+              Price
+            </th>
+            <th onClick={() => sortRows("date")} data-testid="header">
+              Date
+            </th>
+            <th data-testid="header">Remove</th>
           </tr>
         </thead>
         <tbody>{populateRows()}</tbody>

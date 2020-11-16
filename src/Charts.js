@@ -4,6 +4,7 @@ import { fetchShopping } from "./api";
 
 export default function Charts() {
   useEffect(() => {
+    document.title = "Track your spending";
     fetchShopping().then((shopping) => {
       const sorted = shopping.sort((a, b) => {
         return new Date(a.date) - new Date(b.date);

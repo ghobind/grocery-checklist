@@ -15,6 +15,7 @@
     "chart.js": "^2.9.4",
     "json-server": "^0.16.2",
     "lodash": "^4.17.20",
+    "miragejs": "^0.1.41",
     "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
